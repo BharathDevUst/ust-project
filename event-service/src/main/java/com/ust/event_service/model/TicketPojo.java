@@ -4,13 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class EventPojo {
+public class TicketPojo {
+    private long ticketId;
+    private long ticketPrice;
     private long eventId;
-    private String eventName;
-    private List<TicketPojo> allTickets;
 }
