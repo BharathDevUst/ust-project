@@ -6,7 +6,6 @@ import com.ust.event_service.service.EventService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -18,7 +17,6 @@ public class EventController {
     EventService eventService;
     public static final Logger LOG = LoggerFactory.getLogger(EventController.class);
 
-    @Autowired
     public EventController(EventService eventService) {
         this.eventService = eventService;
     }

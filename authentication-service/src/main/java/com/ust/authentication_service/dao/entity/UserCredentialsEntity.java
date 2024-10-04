@@ -22,4 +22,6 @@ public class UserCredentialsEntity {
     private String email;
     @Column(name = "user_pwd")
     private String password;
+    @Column(name = "user_role")
+    private String role;
 }

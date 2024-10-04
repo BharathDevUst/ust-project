@@ -31,7 +31,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                 if(!exchange.getRequest().getHeaders().containsKey(HttpHeaders.AUTHORIZATION)) {
                     throw new RuntimeException("Missing Authorization Header");
                 }
-                // take out the AUthorization header
+                // take out the Authorization header
                 String authHeaderToken = exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION).get(0);
                 if(authHeaderToken != null && authHeaderToken.startsWith("Bearer")) {
                     // remove Bearer from front

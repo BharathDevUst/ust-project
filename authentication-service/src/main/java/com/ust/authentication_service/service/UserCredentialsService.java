@@ -18,8 +18,8 @@ public class UserCredentialsService {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return authDao.saveAndFlush(user);
     }
-    public String generateToken(String name) {
-        return jwtService.generateToken(name);
+    public String generateToken(String name, String role) {
+        return jwtService.generateToken(name, role);
     }
     public boolean verifyToken(String token) {
         jwtService.validateToken(token);

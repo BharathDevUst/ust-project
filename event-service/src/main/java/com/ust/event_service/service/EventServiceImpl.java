@@ -4,8 +4,6 @@ import com.ust.event_service.dao.EventRepository;
 import com.ust.event_service.dao.entity.EventEntity;
 import com.ust.event_service.model.EventPojo;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,7 +14,6 @@ import java.util.Optional;
 public class EventServiceImpl implements EventService {
     EventRepository eventRepo;
 
-    @Autowired
     public EventServiceImpl(EventRepository eventRepo) { this.eventRepo = eventRepo; }
 
     @Override

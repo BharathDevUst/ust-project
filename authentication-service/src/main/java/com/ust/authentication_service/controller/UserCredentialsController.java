@@ -30,7 +30,7 @@ public class UserCredentialsController {
     public String getToken(@RequestBody UserCredentialsEntity user) {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getName(), user.getPassword()));
         if (authentication.isAuthenticated()) {
-            return userCredentialsService.generateToken(user.getName());
+            return userCredentialsService.generateToken(user.getName(), user.getRole());
         }
         return null;
     }
